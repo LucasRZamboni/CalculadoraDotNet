@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace Calculadora
 {
-    internal class Intermediaria
+    internal class Cientifica
     {
         public static void CalcIntermediaria()
         {
             Console.Clear();
-            Console.WriteLine(" ------ CALCULADORA INTERMEDIÁRIA ------");
+            Console.WriteLine(" ------ CALCULADORA CIENTÍFICA ------");
             Console.WriteLine("Escolha a opção desejada abaixo: ");
             Console.WriteLine("-------------------------------");
             Console.WriteLine("1 - Fatorial");
@@ -51,9 +51,9 @@ namespace Calculadora
                     try
                     {
                         Console.WriteLine("Opção escolhida -- > 2 - Número Elevado à Outro Número");
-                        Console.WriteLine("Digite o primeiro numero");
+                        Console.WriteLine("Digite o primeiro número");
                         Global.valor1 = decimal.Parse(Console.ReadLine());
-                        Console.WriteLine("Digite o segundo numero");
+                        Console.WriteLine("Digite o segundo número");
                         Global.valor2 = decimal.Parse(Console.ReadLine());
 
                         Global.total = (decimal)Math.Pow((double)Global.valor1, (double)Global.valor2);
@@ -68,7 +68,7 @@ namespace Calculadora
                     try
                     {
                         Console.WriteLine("Opção escolhida -- > 3 - Raiz Quadrada");
-                        Console.WriteLine("Digite o primeiro numero");
+                        Console.WriteLine("Digite um número");
                         Global.valor1 = decimal.Parse(Console.ReadLine());
 
                         Global.total = (decimal)Math.Sqrt((double)Global.valor1);
@@ -83,7 +83,7 @@ namespace Calculadora
                     try
                     {
                         Console.WriteLine("Opção escolhida -- > 4 - Número Elevado ao Quadrado");
-                        Console.WriteLine("Digite o primeiro numero");
+                        Console.WriteLine("Digite um número");
                         Global.valor1 = decimal.Parse(Console.ReadLine());
 
                         Global.total = (decimal)Math.Pow((double)Global.valor1, 2);

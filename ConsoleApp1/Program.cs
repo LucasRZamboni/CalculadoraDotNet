@@ -27,8 +27,8 @@ internal class Program
             Console.WriteLine(" ------ CALCULADORA ------");
             Console.WriteLine("Escolha a opção desejada abaixo: ");
             Console.WriteLine("-------------------------------");
-            Console.WriteLine("1 - Simples");
-            Console.WriteLine("2 - Intermediária");
+            Console.WriteLine("1 - Padrão");
+            Console.WriteLine("2 - Científica");
             Console.WriteLine("3 - Avançada");
             Console.WriteLine("4 - Sair");
             Console.WriteLine("-------------------------------");
@@ -40,7 +40,7 @@ internal class Program
                     //------ CALCULADORA SIMPLES-------------------------------
                     do
                     {
-                        Simples.CalcSimples();
+                        Padrao.CalcSimples();
 
                         Console.WriteLine("-------------------------------");
                         Console.WriteLine("Deseja continuar? Digite s (SIM)  /  Digite n (NÃO)");
@@ -53,7 +53,7 @@ internal class Program
                     //------ CALCULADORA INTERMEDIÁRIA-------------------------------
                     do
                     {
-                        Intermediaria.CalcIntermediaria();
+                        Cientifica.CalcIntermediaria();
 
                         Console.WriteLine("-------------------------------");
                         Console.WriteLine("Deseja continuar? Digite s (SIM)  /  Digite n (NÃO)");
