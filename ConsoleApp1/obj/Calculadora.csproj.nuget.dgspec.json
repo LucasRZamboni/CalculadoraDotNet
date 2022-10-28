@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Desktop\\Nova pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Desktop\\Nova pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Nova pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj",
         "projectName": "Calculadora",
-        "projectPath": "C:\\Users\\Usuario\\Desktop\\Nova pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Desktop\\Nova pasta\\ConsoleApp1\\ConsoleApp1\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Pasta\\ConsoleApp1\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",

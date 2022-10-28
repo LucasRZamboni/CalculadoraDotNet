@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Globalization;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,12 +60,18 @@ namespace Calculadora
                             Console.WriteLine("O que deseja converter?");
                             Console.WriteLine("1 - Moeda");
                             Console.WriteLine("2 - Peso");
+                            Console.WriteLine("3 - Sair");
                             Global.Opcao = int.Parse(Console.ReadLine());
 
                             if (Global.Opcao == 1)
                             {
                                 do
                                 {
+                                    
+                                    Process.Start("python", @"C:\Users\Usuario\Desktop\Pasta\ConsoleApp1\ConsoleApp1\moedas.py");
+                                    //até aqui  está ok, mas ele nao executa corretamente o arquivo .py
+
+
                                     Console.WriteLine("Para qual moeda deseja converter?");
                                     Console.WriteLine("1 - Real para Dolar(EUA)");
                                     Console.WriteLine("2 - Real para Euro(Europa)");
