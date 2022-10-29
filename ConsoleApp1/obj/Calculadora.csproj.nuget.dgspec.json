@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lucas\\Desktop\\Projetos\\CalculadoraDotNet\\ConsoleApp1\\Calculadora.csproj": {}
+    "C:\\Users\\Usuario\\Desktop\\Pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lucas\\Desktop\\Projetos\\CalculadoraDotNet\\ConsoleApp1\\Calculadora.csproj": {
+    "C:\\Users\\Usuario\\Desktop\\Pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lucas\\Desktop\\Projetos\\CalculadoraDotNet\\ConsoleApp1\\Calculadora.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Desktop\\Pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj",
         "projectName": "Calculadora",
-        "projectPath": "C:\\Users\\lucas\\Desktop\\Projetos\\CalculadoraDotNet\\ConsoleApp1\\Calculadora.csproj",
-        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas\\Desktop\\Projetos\\CalculadoraDotNet\\ConsoleApp1\\obj\\",
+        "projectPath": "C:\\Users\\Usuario\\Desktop\\Pasta\\ConsoleApp1\\ConsoleApp1\\Calculadora.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Usuario\\Desktop\\Pasta\\ConsoleApp1\\ConsoleApp1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

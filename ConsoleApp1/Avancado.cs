@@ -236,7 +236,7 @@ namespace Calculadora
                                                                 Console.WriteLine("2 - Para Euro(Europa)");
                                                                 Console.WriteLine("3 - Para Peso(Argentina)");
                                                                 Console.WriteLine("4 - Para Yuan(China)");
-                                                                //Console.WriteLine("5 - Voltar");
+                                                                Console.WriteLine("0 - Voltar");
                                                                 Global.Tipo = int.Parse(Console.ReadLine());
                                                                 Console.Clear();
                                                                 switch (Global.Tipo)
@@ -334,10 +334,8 @@ namespace Calculadora
                                                                         break;
 
                                                                 }
-
-                                                                Console.WriteLine("Deseja mesmo SAIR? Digite s (SIM)  /  Digite n (NÃO)");
-                                                                Global.sair = char.Parse(Console.ReadLine());
-                                                            } while (Global.sair != 's');
+                                                                
+                                                            } while (Global.Tipo != 0);
 
                                                         }
                                                         catch (Exception ex)

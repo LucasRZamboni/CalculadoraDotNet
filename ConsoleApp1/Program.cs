@@ -30,7 +30,7 @@ internal class Program
             Console.WriteLine("1 - Padrão");
             Console.WriteLine("2 - Científica");
             Console.WriteLine("3 - Avançada");
-            Console.WriteLine("4 - Sair");
+            Console.WriteLine("0 - Sair");
             Console.WriteLine("-------------------------------");
             Global.Tipo = int.Parse(Console.ReadLine());
             Console.Clear();
@@ -43,9 +43,7 @@ internal class Program
                         Padrao.CalcSimples();
 
                         Console.WriteLine("-------------------------------");
-                        Console.WriteLine("Deseja continuar? Digite s (SIM)  /  Digite n (NÃO)");
-                        Global.sair = char.Parse(Console.ReadLine().ToUpper());
-
+                        
                     }
                     catch (Exception ex)
 
@@ -61,17 +59,16 @@ internal class Program
                         Cientifica.CalcIntermediaria();
 
                         Console.WriteLine("-------------------------------");
-                        Console.WriteLine("Deseja continuar? Digite s (SIM)  /  Digite n (NÃO)");
-                        Global.sair = char.Parse(Console.ReadLine().ToUpper());
+                        
                     }
                     catch (Exception ex)
 
                     {
                         Console.WriteLine("Erro", ex);
                     }
-
+                    //------ CALCULADORA INTERMEDIÁRIA-------------------------------
                     break;
-                //------ CALCULADORA INTERMEDIÁRIA-------------------------------
+                
 
                 case 3:
                     //------ CALCULADORA ACANÇADA-------------------------------
@@ -88,18 +85,18 @@ internal class Program
                     {
                         Console.WriteLine("Erro", ex);
                     }
-
+                    //------ CALCULADORA ACANÇADA-------------------------------
                     break;
-
-                //------ CALCULADORA ACANÇADA-------------------------------
+                
                 case 4:
+                    Console.WriteLine("Até mais!");
                     break;
+
                 default:
                     Console.WriteLine("Tipo de calculadora não existente!");
                     break;
             }
-           // Console.WriteLine("Deseja mesmo SAIR? Digite 1 (SIM)  /  Digite 2 (NÃO)");
-           // Global.Tipo = int.Parse(Console.ReadLine());
-        } while (Global.Tipo != 4);
+           
+        } while (Global.Tipo != 0);
     }
 }
