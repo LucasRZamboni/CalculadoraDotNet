@@ -38,50 +38,68 @@ internal class Program
             {
                 case 1:
                     //------ CALCULADORA SIMPLES-------------------------------
-                    do
+                    try
                     {
                         Padrao.CalcSimples();
 
                         Console.WriteLine("-------------------------------");
                         Console.WriteLine("Deseja continuar? Digite s (SIM)  /  Digite n (NÃO)");
-                        Global.sair = Console.ReadLine().ToUpper();
+                        Global.sair = char.Parse(Console.ReadLine().ToUpper());
 
-                    } while (Global.sair != "N");
+                    }
+                    catch (Exception ex)
+
+                    {
+                        Console.WriteLine("Erro", ex);
+                    }
                     //------ CALCULADORA SIMPLES-------------------------------
                     break;
                 case 2:
                     //------ CALCULADORA INTERMEDIÁRIA-------------------------------
-                    do
+                    try
                     {
                         Cientifica.CalcIntermediaria();
 
                         Console.WriteLine("-------------------------------");
                         Console.WriteLine("Deseja continuar? Digite s (SIM)  /  Digite n (NÃO)");
-                        Global.sair = Console.ReadLine().ToUpper();
+                        Global.sair = char.Parse(Console.ReadLine().ToUpper());
+                    }
+                    catch (Exception ex)
 
-                    } while (Global.sair != "N");
+                    {
+                        Console.WriteLine("Erro", ex);
+                    }
+
                     break;
                 //------ CALCULADORA INTERMEDIÁRIA-------------------------------
-                
+
                 case 3:
                     //------ CALCULADORA ACANÇADA-------------------------------
-                    do
+                    try
                     {
+
                         Avancado.CalcAvancada();
 
                         Console.WriteLine("-------------------------------");
-                        Console.WriteLine("Deseja continuar? Digite s (SIM)  /  Digite n (NÃO)");
-                        Global.sair = Console.ReadLine().ToUpper();
 
-                    } while (Global.sair != "N");
+                    }
+                    catch (Exception ex)
+
+                    {
+                        Console.WriteLine("Erro", ex);
+                    }
+
                     break;
+
                 //------ CALCULADORA ACANÇADA-------------------------------
                 case 4:
-                    return;
+                    break;
                 default:
                     Console.WriteLine("Tipo de calculadora não existente!");
                     break;
             }
+           // Console.WriteLine("Deseja mesmo SAIR? Digite 1 (SIM)  /  Digite 2 (NÃO)");
+           // Global.Tipo = int.Parse(Console.ReadLine());
         } while (Global.Tipo != 4);
     }
 }
