@@ -334,7 +334,7 @@ namespace Calculadora
                                                                         break;
 
                                                                 }
-                                                                
+
                                                             } while (Global.Tipo != 0);
 
                                                         }
@@ -451,22 +451,42 @@ namespace Calculadora
                                         break;
                                     case 5:
                                         {
-                                            Console.WriteLine("----- TEMPERATURA -----");
+                                            try { 
 
-                                            Console.WriteLine("1 - Celcius");
+                                            Console.WriteLine("----- TEMPERATURA -----");
+                                            switch (Global.Tipo)
                                             {
-                                                Console.WriteLine("1.1 - Para Fhrenheit");
-                                                Console.WriteLine("1.2 - Para Kelvin");
+
+                                                case 1:
+                                                    Console.WriteLine("1 - Celcius");
+                                                    {
+                                                        Console.WriteLine("1.1 - Para Fhrenheit");
+                                                        Console.WriteLine("1.2 - Para Kelvin");
+                                                    }
+                                                    break;
+                                                case 2:
+                                                    Console.WriteLine("2 - Fahrenheit");
+                                                    {
+                                                        Console.WriteLine("2.1 - Para Celcius");
+                                                        Console.WriteLine("2.2 - Para Kelvin");
+                                                    }
+                                                    break;
+                                                case 3:
+                                                    Console.WriteLine("3 - Kelvin");
+                                                    {
+                                                        Console.WriteLine("3.1 - Para Celcius");
+                                                        Console.WriteLine("3.2 - Para Fhrenheit");
+                                                    }
+                                                    break;
+                                                default:
+                                                    Console.WriteLine("Tipo de conversão não existente!");
+                                                    break;
+
                                             }
-                                            Console.WriteLine("2 - Fahrenheit");
-                                            {
-                                                Console.WriteLine("2.1 - Para Celcius");
-                                                Console.WriteLine("2.2 - Para Kelvin");
                                             }
-                                            Console.WriteLine("3 - Kelvin");
+                                            catch (Exception ex)
                                             {
-                                                Console.WriteLine("3.1 - Para Celcius");
-                                                Console.WriteLine("3.2 - Para Fhrenheit");
+                                                Console.WriteLine("Erro", ex);
                                             }
                                         }
                                         break;

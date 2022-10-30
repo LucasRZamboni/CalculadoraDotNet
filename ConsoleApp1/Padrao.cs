@@ -203,39 +203,56 @@
                                     Console.Clear();
                                     Console.WriteLine("Opção escolhida -- > 8 - Porcentagem");
                                     Console.WriteLine("-------------------------------");
-                                    Console.WriteLine("Digite o primeiro número");
-                                    Global.valor1 = decimal.Parse(Console.ReadLine());
-                                    Console.WriteLine("Número virar porcento");
-                                    Global.valor2 = decimal.Parse(Console.ReadLine());
-                                    Console.WriteLine("-------------------------------");
                                     Console.WriteLine("Qual tipo de conta deseja fazer?");
                                     Console.WriteLine("1 - Somar");
                                     Console.WriteLine("2 - Multiplicar");
                                     Console.WriteLine("3 - Dividir");
                                     Console.WriteLine("4 - Subtrair");
+                                    Console.WriteLine("5 - Apenas resultado");
                                     Console.WriteLine("-------------------------------");
                                     Console.WriteLine("Opção: "); Global.Tipo = int.Parse(Console.ReadLine());
                                     Console.WriteLine("-------------------------------");
+                                    if(Global.Tipo != 5)
+                                    {
+                                        Console.WriteLine("Digite o primeiro número");
+                                        Global.valor1 = decimal.Parse(Console.ReadLine());
+                                        Console.WriteLine("Número porcento");
+                                        Global.valor2 = decimal.Parse(Console.ReadLine());
+                                        Console.WriteLine("-------------------------------");
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("Digite o primeiro número");
+                                        Global.valor1 = decimal.Parse(Console.ReadLine());
+                                        Console.WriteLine("-------------------------------");
+                                    }
+                                    
                                     switch (Global.Tipo)
                                     {
+
                                         case 1:
                                             Global.total = Global.valor1 + (Global.valor1 * (Global.valor2 / 100));
-                                            Console.WriteLine($"Seu valor é: {Global.total}");
+                                            Console.WriteLine($"Seu valor é: {Math.Round(Global.total,2)}");
                                             Console.WriteLine("-------------------------------");
                                             break;
                                         case 2:
                                             Global.total = Global.valor1 * (Global.valor2 / 100);
-                                            Console.WriteLine($"Seu valor é: {Global.total}");
+                                            Console.WriteLine($"Seu valor é: {Math.Round(Global.total, 2)}");
                                             Console.WriteLine("-------------------------------");
                                             break;
                                         case 3:
                                             Global.total = Global.valor1 / (Global.valor2 / 100);
-                                            Console.WriteLine($"Seu valor é: {Global.total}");
+                                            Console.WriteLine($"Seu valor é: {Math.Round(Global.total, 2)}");
                                             Console.WriteLine("-------------------------------");
                                             break;
                                         case 4:
                                             Global.total = Global.valor1 - (Global.valor1 * (Global.valor2 / 100));
-                                            Console.WriteLine($"Seu valor é: {Global.total}");
+                                            Console.WriteLine($"Seu valor é: {Math.Round(Global.total, 2)}");
+                                            Console.WriteLine("-------------------------------");
+                                            break;
+                                        case 5:
+                                            Global.total = Global.valor1 / 100;
+                                            Console.WriteLine($"Seu valor é: {Math.Round(Global.total, 2)}");
                                             Console.WriteLine("-------------------------------");
                                             break;
                                         default:
