@@ -2,11 +2,11 @@
 {
     internal class Cientifica
     {
-        public static void CalcIntermediaria()
+        public static void CalcCientifica()
         {
             try
             {
-                do
+                while (true)
                 {
                     Console.Clear();
                     Console.WriteLine(" ------ CALCULADORA CIENTÍFICA ------");
@@ -176,11 +176,13 @@
                                 Console.WriteLine("Erro", ex);
                             }
                             break;
+                        case 0:
+                            return;
                         default:
                             Console.WriteLine("Opção não existente!");
                             break;
                     }
-                } while (Global.Opcao != 0);
+                }
             }
             catch (Exception ex)
 

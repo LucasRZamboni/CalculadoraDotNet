@@ -2,11 +2,11 @@
 {
     internal class Padrao
     {
-        public static void CalcSimples()
+        public static void CalcPadrao()
         {
             try
             {
-                do
+                while (true)
                 {
                     Console.Clear();
                     Console.WriteLine(" ------ CALCULADORA PADRÃO 2 NÚMEROS ------");
@@ -23,6 +23,7 @@
                     Console.WriteLine("0 - Sair");
                     Console.WriteLine("-------------------------------");
                     Global.Opcao = int.Parse(Console.ReadLine());
+
                     Console.Clear();
                     switch (Global.Opcao)
                     {
@@ -212,7 +213,7 @@
                                     Console.WriteLine("-------------------------------");
                                     Console.WriteLine("Opção: "); Global.Tipo = int.Parse(Console.ReadLine());
                                     Console.WriteLine("-------------------------------");
-                                    if(Global.Tipo != 5)
+                                    if (Global.Tipo != 5)
                                     {
                                         Console.WriteLine("Digite o primeiro número");
                                         Global.valor1 = decimal.Parse(Console.ReadLine());
@@ -226,13 +227,13 @@
                                         Global.valor1 = decimal.Parse(Console.ReadLine());
                                         Console.WriteLine("-------------------------------");
                                     }
-                                    
+
                                     switch (Global.Tipo)
                                     {
 
                                         case 1:
                                             Global.total = Global.valor1 + (Global.valor1 * (Global.valor2 / 100));
-                                            Console.WriteLine($"Seu valor é: {Math.Round(Global.total,2)}");
+                                            Console.WriteLine($"Seu valor é: {Math.Round(Global.total, 2)}");
                                             Console.WriteLine("-------------------------------");
                                             break;
                                         case 2:
@@ -255,6 +256,8 @@
                                             Console.WriteLine($"Seu valor é: {Math.Round(Global.total, 2)}");
                                             Console.WriteLine("-------------------------------");
                                             break;
+                                        case 0:
+                                            return;
                                         default:
                                             Console.Clear();
 
@@ -262,9 +265,6 @@
                                             Console.WriteLine("Tipo de cálculo não existente!");
                                             break;
                                     }
-                                    
-                                    //Console.WriteLine($"Seu valor é: {Global.total}");
-                                    Console.WriteLine("-------------------------------");
                                     Console.WriteLine("Deseja calcular novamente? Digite s (SIM)  /  Digite n (NÃO)");
                                     Global.sair = char.Parse(Console.ReadLine());
                                 } while (Global.sair != 'n');
@@ -274,13 +274,14 @@
                                 Console.WriteLine("Erro", ex);
                             }
                             break;
-                        case 9:
+                        case 0:
                             return;
                         default:
                             Console.WriteLine("Opção não existente!");
                             break;
                     }
-                } while (Global.Opcao != 0);
+                }
+
             }
             catch (Exception ex)
             {

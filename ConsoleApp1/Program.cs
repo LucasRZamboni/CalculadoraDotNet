@@ -21,7 +21,7 @@ internal class Program
         SetWindowPos(MyConsole, 0, xpos, ypos, 0, 0, SWP_NOSIZE);
         Console.SetWindowSize(width: 70, height: 30);
         // Console.SetWindowPosition(30, 30);
-        do
+        while (true)
         {
             Console.Clear();
             Console.WriteLine(" ------ CALCULADORA ------");
@@ -40,10 +40,15 @@ internal class Program
                     //------ CALCULADORA SIMPLES-------------------------------
                     try
                     {
-                        Padrao.CalcSimples();
+                        do
+                        {
+                            Padrao.CalcPadrao();
 
-                        Console.WriteLine("-------------------------------");
-                        
+                            Console.WriteLine("-------------------------------");
+
+                            Console.WriteLine("Deseja SAIR da Calculadora Padrão? Digite s (SIM)  /  Digite n (NÃO)");
+                            Global.sair = char.Parse(Console.ReadLine());
+                        } while (Global.sair != 's');
                     }
                     catch (Exception ex)
 
@@ -56,10 +61,14 @@ internal class Program
                     //------ CALCULADORA INTERMEDIÁRIA-------------------------------
                     try
                     {
-                        Cientifica.CalcIntermediaria();
+                        do
+                        {
+                            Cientifica.CalcCientifica();
 
-                        Console.WriteLine("-------------------------------");
-                        
+                            Console.WriteLine("-------------------------------");
+                            Console.WriteLine("Deseja SAIR da Calculadora Científica? Digite s (SIM)  /  Digite n (NÃO)");
+                            Global.sair = char.Parse(Console.ReadLine());
+                        } while (Global.sair != 's');
                     }
                     catch (Exception ex)
 
@@ -68,17 +77,20 @@ internal class Program
                     }
                     //------ CALCULADORA INTERMEDIÁRIA-------------------------------
                     break;
-                
+
 
                 case 3:
                     //------ CALCULADORA ACANÇADA-------------------------------
                     try
                     {
+                        do
+                        {
+                            Avancado.CalcAvancada();
 
-                        Avancado.CalcAvancada();
-
-                        Console.WriteLine("-------------------------------");
-
+                            Console.WriteLine("-------------------------------");
+                            Console.WriteLine("Deseja SAIR da Calculadora Avançada? Digite s (SIM)  /  Digite n (NÃO)");
+                            Global.sair = char.Parse(Console.ReadLine());
+                        } while (Global.sair != 's');
                     }
                     catch (Exception ex)
 
@@ -87,16 +99,16 @@ internal class Program
                     }
                     //------ CALCULADORA ACANÇADA-------------------------------
                     break;
-                
-                case 4:
-                    Console.WriteLine("Até mais!");
+
+                case 0:
+                    return;
+                    
+                default:
+                    Console.WriteLine("Opção não existente!");
                     break;
 
-                default:
-                    Console.WriteLine("Tipo de calculadora não existente!");
-                    break;
             }
-           
-        } while (Global.Tipo != 0);
+            
+        } 
     }
 }
